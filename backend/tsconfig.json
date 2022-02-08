@@ -10,7 +10,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types"],
+    "typeRoots": ["./src/types", "node_modules/@types"],
     "paths": {}
   },
   "include": ["src/**/*.ts"],

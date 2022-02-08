@@ -12,4 +12,6 @@ export const config = {
     USER: process.env.DB_USER,
     PASSWORD: process.env.DB_PASSWORD,
   },
+  JWT_SECRET: process.env.JWT_SECRET || 'jwt_secret',
+  JWT_EXPIRE: process.env.JWT_EXPIRE,
 };
