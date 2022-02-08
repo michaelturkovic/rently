@@ -4,7 +4,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import { loggerMiddleware, errorMiddleware } from './middlewares';
 import { connectDB } from './config';
-
+import { AuthRoute, UserRoute } from './routes';
 export default class App {
   public app: Application;
   private port: number;
@@ -33,7 +33,8 @@ export default class App {
   }
 
   private initializeRoutes(): void {
-    // this.app.use('/api/auth', new AuthRoutes().router);
+    this.app.use('/api/auth', new AuthRoute().router);
+    this.app.use('/api/users', new UserRoute().router);
   }
 
   private initializeDBConnection(): void {
